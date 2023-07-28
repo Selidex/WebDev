@@ -1,0 +1,56 @@
+<html>
+
+<head>
+  <title>Web Dev</title>
+  <meta name="author" content="Selidex Parnell">
+  <link rel="stlyesheet" href="style.css">
+  <script src="./js/base.js"></script>
+</head>
+
+<body>
+  <div class="topnav">
+    <a href="index.html">Home</a>
+    <a class="active" href="#">Deploy</a>
+    <a href="html.html">HTML</a>
+    <a href="css.html">CSS</a>
+    <a href="js.html">JS</a>
+    <div class="dmb"> <button class="imgbtn" onclick="darkMode()"><img id="bulb" src="./images/lightbulb.png" alt="darkmode"></button>
+    </div>
+  </div>
+  <div class="filler"></div>
+  <h1 id="name">How To Deploy A CodePen Using Google Pages</h1>
+  <h2>Step 1: Linking Codepen to Github</h2>
+  <ol>
+    <li>If you do not have one already, create a <a href="https://github.com/">GitHub</a> account using the same email you used to create your CodePen account. If you need to change/add an email to your CodePen, you can do so <a href="https://codepen.io/settings/account">here</a></li>
+    <li>Log into CodePen using Github.</li>
+  </ol>
+  <h2>Step 2: Transfer the CodePen to GitHub</h2>
+  <ol>
+    <li>Open up the pen you would like to host.</li>
+    <li>At the bottom of the screen find the Export button</li>
+    <li>Select "Save as GitHub Gist"</li>
+    <li>On your GitHub account, create a new repository</li>
+    <li>At the bottom of your repository, select "Import Code"</li>
+    <li>Copy the url from the Gist that you exported, and paste into the url bar in the repository</li>
+    <li>Wait for the files to import</li>
+  </ol>
+  <h2>Step 3: Enable Pages Hosting</h2>
+  <ol>
+    <li>In your repository, select Settings from the top bar</li>
+    <li>In the settings section, select Pages, underneath Code and automation</li>
+    <li>Underneath Branch, select main using the drop down menu, then click save</li>
+    <li>It can take some time to set up, but once it does, there should be an Enviroments section in the &ltcode&gt section of your repository. In this section should be github-pages. Click this.</li>
+    <li>Click "View Deployment" to view your website</li>
+  </ol>
+  <h2>Help, my site doesn't look like it does on CodePen!?!</h2>
+  <p>CodePen does not require linking your html page to your css page in order for stylings to be applied. This is not the case for GitHub Pages. Make sure you have a link to your css page in your &lthead&gt tag of your html. CodePen exports the css file as style.css, so your link should look like this:<br>&ltlink rel="stylesheet" href="style.css"&gt<br>Including this line in your html file links your html to your css file. You can make this edit by selecting your html file from the code segment of your repository (make sure to click on the file name itself, and not the blue comment section), and then click on the pencil on the top bars of the page to edit your html file.</p>
+  <h2>Help, my javascript isn't working</h2>
+  <p>This could be due to several issues, but a few big ones are as follow:</p>
+  <ol>
+    <li>You have not included a proper link to your js file in your head. The proper way to do this is using the &ltscript&gt tag. All you need to do to implement this is include the following code in your head:<br>&ltscript src="script.js"&gt &lt/script&gt<br>Keep in mind, script.js is just how Codepen exports the js file. In a more standard setting, the js files would be stored in a separate folder, possibly with more js files, so you would use the following format instead:<br>&ltscript src="./js/filename.js"&gt &lt/script&gt</li>
+    <li>There is possibly an error in your javascript, whether it be pathing to linked elements, or just common user errors. Double check that there are no typos, no missing semicolons (;), etc.</li>
+    <li>Github pages is currently not designed to run server side code, so it is possible that one or more of your functions can not run on Github pages. If your issue is not one of the previous issues, it is most likely this.</li>
+  </ol>
+</body>
+
+</html>
