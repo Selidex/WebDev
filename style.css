@@ -12,9 +12,11 @@ h1 {
 }
 h2 {
   margin-left: 5%;
+  margin-right: 5%;
 }
 p {
-  margin-left: 5%;
+  margin-left: 6%;
+  margin-right: 6%;
 }
 .topnav {
   overflow: hidden;
@@ -63,4 +65,10 @@ ul{
   list-style-type: none;
   line-height: 140%;
   margin-left: 5%;
+  margin-right: 5%;
+}
+
+ol{
+  margin-left: 5%;
+  margin-right: 5%;
 }
