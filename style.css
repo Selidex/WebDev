@@ -17,6 +17,7 @@ h2 {
 p {
   margin-left: 6%;
   margin-right: 6%;
+  font-size: 18px;
 }
 .topnav {
   overflow: hidden;
@@ -71,4 +72,12 @@ ul{
 ol{
   margin-left: 5%;
   margin-right: 5%;
+}
+
+p a:link{
+  color: blue;
+}
+
+p a:visited{
+  color:blue;
 }
